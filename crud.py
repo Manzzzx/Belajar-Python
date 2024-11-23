@@ -1,9 +1,8 @@
 import os
 
 def list_mahasiswa(list_mhs):
-    for i in range(0, len(list_mhs)):
-        print(f"Mahasiswa ke-{i} = {list_mhs[i]}")
-
+    for i, mhs in enumerate(list_mhs, start=1):
+        print(f"Mahasiswa ke-{i} = {mhs}")
 def delete_mahasiswa(list_mhs, index):
     list_mhs.pop(index)
 
@@ -40,7 +39,7 @@ while True:
         os.system("clear")
         list_mahasiswa(mahasiswa)
     elif command == "e":
-        index = int(input("Masukan Index : "))
+        index = int(input("Masukan nomor : "))
         edit_mahasiswa(mahasiswa, index)
         os.system("clear")
         list_mahasiswa(mahasiswa)
